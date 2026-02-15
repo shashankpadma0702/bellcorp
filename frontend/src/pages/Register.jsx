@@ -14,7 +14,7 @@ export default function Register() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "/api/auth/register",   // ✅ CHANGED HERE
         { name, email, password }
       );
 
@@ -27,7 +27,6 @@ export default function Register() {
 
   return (
     <div className="min-h-screen flex">
-
       {/* LEFT BRAND PANEL */}
       <div className="hidden md:flex w-1/2 bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 text-white flex-col justify-center px-16">
         <h1 className="text-5xl font-bold mb-6">

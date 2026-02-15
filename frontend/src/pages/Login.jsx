@@ -12,8 +12,8 @@ export default function Login() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        { email, password },
+        "/api/auth/login",   // ✅ CHANGED HERE
+        { email, password }
       );
 
       localStorage.setItem("token", data.token);
